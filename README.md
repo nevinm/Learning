@@ -3,7 +3,7 @@ Random finds
 
 Async await through loops testing:
 
-function delay() {
+`function delay() {
   return new Promise(resolve => setTimeout(resolve, 300));
 }
 
@@ -13,3 +13,4 @@ async function delayedLog(item) {
   await delay();
   console.log(item);
 }
+`
