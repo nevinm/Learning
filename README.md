@@ -5,7 +5,7 @@ Async await through loops testing: (https://lavrton.com/javascript-loops-how-to-
 
 ```
 function delay() {
-  return new Promise(resolve => setTimeout(resolve, 300));
+  return new Promise(resolve => setTimeout(resolve, Math.random()*1000));
 }
 
 async function delayedLog(item) {
