@@ -25,8 +25,21 @@ async function processArray(array) {
   console.log('Done!');
 }
 
-processArray([1, 2, 3]);
+processArray([1, 2, 3, 4, 5, 6, 7]);
 ```
+
+```
+o/P: Done!
+5
+2
+6
+3
+7
+4
+1
+```
+
+
 Sequentially waiting to finish:
 
 ```
@@ -36,7 +49,19 @@ async function processArray(array) {
   }
   console.log('Done!');
 }
+processArray([1, 2, 3, 4, 5, 6, 7]);
 ```
+```
+o/P: 1
+2
+3
+4
+5
+6
+7
+Done!
+```
+
 
 Wait for everything to finish:
 ```
@@ -47,4 +72,16 @@ async function processArray(array) {
   await Promise.all(promises);
   console.log('Done!');
 }
+processArray([1, 2, 3, 4, 5, 6, 7]);
+```
+
+```
+O/P: 7
+4
+3
+5
+6
+1
+2
+Done!
 ```
