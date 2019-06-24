@@ -1,7 +1,7 @@
 # Learning
 Random finds
 
-Async await through loops testing: (https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/)
+## Async await through loops testing: (https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/)
 
 ```
 function delay() {
@@ -17,7 +17,7 @@ async function delayedLog(item) {
 }
 ```
 
-Concurrent process - Will not wait to finish. (forEach/map)
+## Concurrent process - Will not wait to finish. (forEach/map)
 ```
 async function processArray(array) {
   array.forEach(async (item) => {
@@ -30,7 +30,16 @@ processArray([1, 2, 3, 4, 5, 6, 7]);
 ```
 
 ```
-o/P: Done!
+o/P:
+Started with item 1
+Started with item 2
+Started with item 3
+Started with item 4
+Started with item 5
+Started with item 6
+Started with item 7
+
+Done!
 5
 2
 6
@@ -41,7 +50,7 @@ o/P: Done!
 ```
 
 
-Sequentially waiting to finish: (for of/for loop)
+## Sequentially waiting to finish: (for of/for loop)
 
 ```
 async function processArray(array) {
@@ -53,18 +62,25 @@ async function processArray(array) {
 processArray([1, 2, 3, 4, 5, 6, 7]);
 ```
 ```
-o/P: 1
+o/P: 
+Started with item 1
+1
+Started with item 2
 2
+Started with item 3
 3
+Started with item 4
 4
+Started with item 5
 5
+Started with item 6
 6
+Started with item 7
 7
-Done!
+ Done!
 ```
 
-
-Wait for everything to finish:
+## Waits for everything to finish:
 ```
 async function processArray(array) {
   // map array to promises
@@ -77,12 +93,21 @@ processArray([1, 2, 3, 4, 5, 6, 7]);
 ```
 
 ```
-O/P: 7
-4
-3
+O/P: 
+Started with item 1
+Started with item 2
+Started with item 3
+Started with item 4
+Started with item 5
+Started with item 6
+Started with item 7
+Promise {<pending>}
+7
 5
 6
-1
 2
+4
+3
+1
 Done!
 ```
