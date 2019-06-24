@@ -9,6 +9,7 @@ function delay() {
 }
 
 async function delayedLog(item) {
+  console.log(`Started with item ${item}`);
   // notice that we can await a function
   // that returns a promise
   await delay();
