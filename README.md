@@ -16,7 +16,7 @@ async function delayedLog(item) {
 }
 ```
 
-Concurrent process - Will not wait to finish.
+Concurrent process - Will not wait to finish. (forEach/map)
 ```
 async function processArray(array) {
   array.forEach(async (item) => {
