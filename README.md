@@ -40,7 +40,7 @@ o/P: Done!
 ```
 
 
-Sequentially waiting to finish:
+Sequentially waiting to finish: (for of/for loop)
 
 ```
 async function processArray(array) {
